@@ -14,7 +14,7 @@ Server/Backend untuk Project Website Jual Beli Tiket secara Online.
 - [JavaScript](https://www.javascript.com/)
 - [Node.js](https://nodejs.org/en/)
 - [Express.js](https://expressjs.com/), Web Server ini dibangun menggunakan [Express Generator](https://expressjs.com/en/starter/generator.html)
-- [MongoDB](https://www.mongodb.com/)
+- [MongoDB](https://www.mongodb.com/), menggunakan ORM [Mongoose](https://mongoosejs.com/)
 
 ## Flow Aplikasi
 
