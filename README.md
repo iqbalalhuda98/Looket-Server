@@ -6,7 +6,7 @@ Server/Backend untuk Project Website Jual Beli Tiket secara Online.
 
 - [Teknologi](#teknologi)
 - [Flow Aplikasi](#flow-aplikasi)
-- [Rancangan Database (ERD)](#rancangan-database-(erd))
+- [Entity Relationship Diagram](#entity-relationship-diagram)
 - [Daftar API ENDPOINT](#daftar-api-endpoint)
 - [Lisensi](#lisensi)
 
@@ -35,7 +35,7 @@ Server/Backend untuk Project Website Jual Beli Tiket secara Online.
 | Participant     | Melakukan order / checkout                                              |
 | Participant     | Melihat history order event                                             |
 
-## Rancangan Database (ERD)
+## Entity Relationship Diagram
 
 <img src="public/images/Looket-Project-ERD.png" >
 
