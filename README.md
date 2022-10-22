@@ -4,17 +4,16 @@ Server/Backend untuk Project Website Jual Beli Tiket secara Online.
 
 ## Daftar Isi
 
-- [Technology](#technology)
+- [Teknologi](#teknologi)
 - [Flow Aplikasi](#flow-aplikasi)
-- [Rancangan Database Prototype](#rancangan-database-prototype)
+- [Rancangan Database (ERD)](#rancangan-database-(erd))
 - [Daftar API ENDPOINT](#daftar-api-endpoint)
 - [Lisensi](#lisensi)
 
 ## Teknologi
 - [JavaScript](https://www.javascript.com/)
 - [Node.js](https://nodejs.org/en/)
-- [Express.js](https://expressjs.com/)
-Web Server ini dibangun menggunakan [Express Generator](https://expressjs.com/en/starter/generator.html)
+- [Express.js](https://expressjs.com/), Web Server ini dibangun menggunakan [Express Generator](https://expressjs.com/en/starter/generator.html)
 
 ## Flow Aplikasi
 
