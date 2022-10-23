@@ -75,7 +75,8 @@ Dibutuhkan `node` dan `npm` yang telah terinstall secara global pada komputer at
 `npm run dev`  
 
 - Akses ENDPOINT menggunakan aplikasi [Postman](https://www.postman.com/)
-  Contoh: Get all categories: `localhost:9000/api/v1/cms/categories`
+  Contoh: 
+  - Get all categories: `localhost:9000/api/v1/cms/categories`
 
 ## Repo Web Client atau Frontend
 
