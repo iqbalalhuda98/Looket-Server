@@ -14,8 +14,6 @@ Web Server/Backend untuk Project Website Jual Beli Tiket secara Online.
 - [Repo Web Client atau Frontend](#repo-web-client-atau-frontend)
 - [Lisensi](#lisensi)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 ## Teknologi
 - [JavaScript](https://www.javascript.com/)
 - [Node.js](https://nodejs.org/en/)
