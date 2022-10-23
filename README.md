@@ -1,6 +1,6 @@
 <h2 align="center">Looket-Server</h2>
 
-Server/Backend untuk Project Website Jual Beli Tiket secara Online.
+Web Server/Backend untuk Project Website Jual Beli Tiket secara Online.
 
 ## Daftar Isi
 
@@ -8,6 +8,8 @@ Server/Backend untuk Project Website Jual Beli Tiket secara Online.
 - [Flow Aplikasi](#flow-aplikasi)
 - [Entity Relationship Diagram](#entity-relationship-diagram)
 - [Daftar API ENDPOINT](#daftar-api-endpoint)
+- [Cara Install dan Setup](#cara-install-dan-setup)
+- [Repo Web Client atau Frontend](#)
 - [Lisensi](#lisensi)
 
 ## Teknologi
@@ -58,6 +60,25 @@ API ini di test / uji dengan menggunakan Aplikasi Postman Desktop (WIP)
 <!--
 | `/api/auth/gmail-link`       | GET    | GET gmai link                               | Sudah  | OK         | Tidak             |
  -->
+
+## Cara Install dan Setup
+
+Clone atau Download repository ini. 
+Dibutuhkan `node` dan `npm` yang telah terinstall secara global pada komputer atau laptop anda.  
+
+- Install:
+
+`npm install`  
+
+- Untuk menjalankan web server:
+
+`npm run dev`  
+
+- Akses ENDPOINT menggunakan aplikasi [Postman](https://www.postman.com/)
+
+## Repo Web Client atau Frontend
+
+Work In Progress
 
 ## Lisensi
 
