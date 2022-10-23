@@ -3,15 +3,15 @@ const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
 
+const app = express();
+
 // const indexRouter = require('./routes/index');
 // const usersRouter = require('./routes/users');
 
-// router
-const categoriesRouter = require("./app/api/v1/categories/router");
-
 const v1 = "/api/v1/cms";
 
-const app = express();
+// import router categories
+const categoriesRouter = require("./app/api/v1/categories/router");
 
 app.use(logger("dev"));
 app.use(express.json());
@@ -28,6 +28,7 @@ app.get("/", (req, res) => {
     });
 });
 
+// gunakan router router
 app.use(v1, categoriesRouter);
 
 module.exports = app;

@@ -85,8 +85,14 @@ const remove = async(req, res, next) => {
 
         const result = await Categories.findByIdAndRemove(id);
 
+        if (!result)
+            return res.status(404).json({
+                message: "id tidak ditemukan",
+            });
+
         res.status(200).json({
             data: result,
+            message: `data dengan id ${id} telah berhasil dihapus`,
         });
     } catch (error) {
         next(error);
