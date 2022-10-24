@@ -1,17 +1,25 @@
-// import model category
-const Categories = require("./model");
+const { StatusCodes } = require("http-status-codes");
+
+// import services
+const {
+    getAllCategories,
+    createCategories,
+    getOneCategories,
+    updateCategories,
+    deleteCategories,
+} = require("../../../services/mongoose/categories");
 
 // buat function create
 const create = async(req, res, next) => {
     try {
-        // membuat categories baru menggunakan data dari `name`
-        const { name } = req.body;
+        // sebelum menggunakan services ↓
+        // const result = await Categories.create({ name });
 
-        // simpan Category yang baru dibuat ke MongoDB
-        const result = await Categories.create({ name });
+        // setelah menggunakan services ↓
+        const result = await createCategories(req);
 
         // berikan response kepada client dengan mengembalikan product yang baru dibuat
-        res.status(201).json({
+        res.status(StatusCodes.CREATED).json({
             data: result,
         });
     } catch (err) {
@@ -22,84 +30,53 @@ const create = async(req, res, next) => {
 
 const index = async(req, res, next) => {
     try {
-        // jika ingin menampilkan semua field ↓
-        // const result = await Categories.find()
+        const result = await getAllCategories();
 
-        const result = await Categories.find().select("_id name");
-
-        res.status(200).json({
+        res.status(StatusCodes.OK).json({
             data: result,
         });
-    } catch (error) {
-        next(error);
+    } catch (err) {
+        next(err);
     }
 };
 
 const find = async(req, res, next) => {
     try {
-        const { id } = req.params;
+        const result = await getOneCategories(req);
 
-        // jika ingin menggunakan findById ↓
-        // const result = await Categories.findById(id);
-
-        const result = await Categories.findOne({ _id: id });
-
-        if (!result) {
-            return res.status(404).json({ message: "data tidak ditemukan" });
-        }
-
-        res.status(200).json({
+        res.status(StatusCodes.OK).json({
             data: result,
         });
-    } catch (error) {
-        next(error);
+    } catch (err) {
+        next(err);
     }
 };
 
 const update = async(req, res, next) => {
     try {
-        const { id } = req.params;
-        const { name } = req.body;
+        const result = await updateCategories(req);
 
-        // Cara pertama ↓, cari dahulu data berdasarkan id, lalu update.
-        // const result = await Categories.findById(id);
-        // if (!result) {
-        //     return res.status(404).json({ message: "data tidak ditemukan" });
-        // }
-        // result.name = name;
-        // result.save();
-
-        const result = await Categories.findByIdAndUpdate({ _id: id }, { name: name }, { new: true, runValidators: true });
-
-        res.status(200).json({
+        res.status(StatusCodes.OK).json({
             data: result,
         });
-    } catch (error) {
-        next(error);
+    } catch (err) {
+        next(err);
     }
 };
 
 const remove = async(req, res, next) => {
     try {
-        const { id } = req.params;
+        const result = await deleteCategories(req);
 
-        const result = await Categories.findByIdAndRemove(id);
-
-        if (!result)
-            return res.status(404).json({
-                message: "id tidak ditemukan",
-            });
-
-        res.status(200).json({
+        res.status(StatusCodes.OK).json({
             data: result,
-            message: `data dengan id ${id} telah berhasil dihapus`,
         });
-    } catch (error) {
-        next(error);
+    } catch (err) {
+        next(err);
     }
 };
 
-// Export fungsi create pada controller categories
+// Export semua fungsi pada controller categories
 module.exports = {
     create,
     index,

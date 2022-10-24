@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express();
 
-// import product controller
+// import categories controller
 const { create, index, find, update, remove } = require("./controller");
 
 // pasangkan route endpoint dengan method `index, create, find, dsb`
