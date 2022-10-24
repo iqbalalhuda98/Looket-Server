@@ -2,7 +2,7 @@
 
 <h2 align="center">Looket-Server</h2>
 
-Web Server/Backend untuk Project Website Jual Beli Tiket secara Online.
+Web Server/Backend untuk Project Website Jual Beli Tiket secara Online. (Work in Progress)
 
 ## Daftar Isi
 
