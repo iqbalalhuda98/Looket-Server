@@ -9,10 +9,11 @@ const v1 = "/api/v1/cms";
 
 // import router
 const categoriesRouter = require("./app/api/v1/categories/router");
+const imagesRouter = require("./app/api/v1/images/router");
 
 // import middlewares
-const notFoundMiddleware = require('./app/middlewares/not-found');
-const handleErrorMiddleware = require('./app/middlewares/handler-error');
+const notFoundMiddleware = require("./app/middlewares/not-found");
+const handleErrorMiddleware = require("./app/middlewares/handler-error");
 
 app.use(logger("dev"));
 app.use(express.json());
@@ -28,6 +29,7 @@ app.get("/", (req, res) => {
 
 // gunakan router
 app.use(v1, categoriesRouter);
+app.use(v1, imagesRouter);
 
 // gunakan middlewares (harus berada dibawah router)
 app.use(notFoundMiddleware);
