@@ -1,8 +1,5 @@
-// import package mongoose
-const mongoose = require("mongoose");
-
-// ambil module model dan Schema dari package mongoose
-const { model, Schema } = mongoose;
+const mongoose = require("mongoose"); // import package mongoose
+const { model, Schema } = mongoose; // ambil modul model dan Schema dari package mongoose
 
 let categorySchema = Schema({
     name: {

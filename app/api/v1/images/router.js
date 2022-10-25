@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express();
 
-// import images controller
+// import controller images
 const { create } = require("./controller");
 
 // import middlewares multer

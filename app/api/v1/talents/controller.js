@@ -1,3 +1,5 @@
+const { StatusCodes } = require("http-status-codes"); // import http-status-codes
+
 const {
     getAllTalents,
     getOneTalents,
@@ -5,8 +7,6 @@ const {
     createTalents,
     deleteTalents,
 } = require("../../../services/mongoose/talents");
-
-const { StatusCodes } = require("http-status-codes");
 
 const create = async(req, res, next) => {
     try {

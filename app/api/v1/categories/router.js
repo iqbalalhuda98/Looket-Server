@@ -1,10 +1,10 @@
 const express = require("express");
 const router = express();
 
-// import categories controller
+// import controller categories
 const { create, index, find, update, remove } = require("./controller");
 
-// pasangkan route endpoint dengan method `index, create, find, dsb`
+// pasangkan route endpoint dengan method `index, create, find, dan sebagainya`
 router.get("/categories", index);
 router.post("/categories", create);
 router.get("/categories/:id", find);

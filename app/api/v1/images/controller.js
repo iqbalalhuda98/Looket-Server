@@ -1,4 +1,4 @@
-const { StatusCodes } = require("http-status-codes");
+const { StatusCodes } = require("http-status-codes"); // import http-status-codes
 
 // import services images
 const { createImages } = require("../../../services/mongoose/images");
