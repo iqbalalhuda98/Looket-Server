@@ -5,4 +5,4 @@ let imageSchema = Schema({
     name: { type: String },
 }, { timestamps: true });
 
-module.exports = model("Image", imageSchema);
+module.exports = model("Image", imageSchema); // apabila butuh relasi ke collection image, maka gunakan nama model "Image"

@@ -10,6 +10,7 @@ const v1 = "/api/v1/cms";
 // import router
 const categoriesRouter = require("./app/api/v1/categories/router");
 const imagesRouter = require("./app/api/v1/images/router");
+const talentsRouter = require("./app/api/v1/talents/router");
 
 // import middlewares
 const notFoundMiddleware = require("./app/middlewares/not-found");
@@ -30,6 +31,7 @@ app.get("/", (req, res) => {
 // gunakan router
 app.use(v1, categoriesRouter);
 app.use(v1, imagesRouter);
+app.use(v1, talentsRouter);
 
 // gunakan middlewares (harus berada dibawah router)
 app.use(notFoundMiddleware);
