@@ -11,6 +11,7 @@ const v1 = "/api/v1/cms";
 const categoriesRouter = require("./app/api/v1/categories/router");
 const imagesRouter = require("./app/api/v1/images/router");
 const talentsRouter = require("./app/api/v1/talents/router");
+const eventsRouter = require("./app/api/v1/events/router");
 
 // import middlewares
 const notFoundMiddleware = require("./app/middlewares/not-found");
@@ -23,15 +24,16 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", (req, res) => {
-    res.status(200).json({
-        message: "Welcome to Server Looket",
-    });
+  res.status(200).json({
+    message: "Welcome to Server Looket",
+  });
 });
 
 // gunakan router
 app.use(v1, categoriesRouter);
 app.use(v1, imagesRouter);
 app.use(v1, talentsRouter);
+app.use(v1, eventsRouter);
 
 // gunakan middlewares (harus berada dibawah router)
 app.use(notFoundMiddleware);

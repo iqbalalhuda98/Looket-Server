@@ -81,6 +81,8 @@ Dibutuhkan `node` dan `npm` yang telah terinstall secara global pada komputer at
 
   `npm install`  
 
+- Jangan lupa tambahkan file .env
+
 - Untuk menjalankan web server:
 
   `npm run dev`  
